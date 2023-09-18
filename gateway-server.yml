@@ -7,6 +7,13 @@ spring:
       discovery.locator:
         enabled: true
         lowerCaseServiceId: true
+      routes:
+        - id: sample
+          uri: lb://sample
+          predicates:
+            - Path=/sample/**
+          filters:
+            - RewritePath=/sample/(?<path>.*), /$\{path}
 
 eureka:
   instance:

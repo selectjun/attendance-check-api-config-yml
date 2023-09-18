@@ -1,0 +1,14 @@
+example:
+  property: I AM DEV
+
+server:
+  port: 8069
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8070/eureka
